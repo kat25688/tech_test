@@ -18,7 +18,7 @@ function App() {
         console.log(jsonData); // result results as an object
         let tableData = "";
 
-        //for each result return id, owner, star count
+        //for each result return id, owner > login, star count
         jsonData.forEach((result) => {
           tableData += `<tr>
             <td>${result.items[0].id}</td>
