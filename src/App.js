@@ -18,16 +18,16 @@ function App() {
         console.log(jsonData); // result results as an object
         let tableData = "";
         // displaying that able to return 1 set of results
-        console.log(`first id result: ${jsonData.items[0].id}`);
+        console.log(`first name result: ${jsonData.items[0].name}`);
         console.log(`first login result: ${jsonData.items[0].owner.login}`);
         console.log(
           `first star count result: ${jsonData.items[0].stargazers_count}`
         );
 
-        //for each result return id, owner > login, star count
+        //for each result return name, owner > login, star count
         jsonData.forEach((result) => {
           tableData += `<tr>
-            <td>${result.items.id}</td>
+            <td>${result.items.name}</td>
             <td>${result.items.owner.login}</td>
             <td>${result.items.stargazers_count}</td>
             </tr>`;
@@ -37,7 +37,7 @@ function App() {
         document.getElementById("table_body").innerHTML = tableData;
       }
     } catch (error) {
-      //adding in a try/catch to cath any errors and alert the user
+      //adding in a try/catch to catch any errors and alerts
       alert(error);
     }
   }
@@ -59,7 +59,7 @@ function App() {
         <table className="table table-bordered">
           <thead className="table-primary">
             <tr>
-              <th scope="col">Repository Name (id)</th>
+              <th scope="col">Repository Name (name)</th>
               <th scope="col">Author Name (login)</th>
               <th scope="col">Number of Stars (stargazers_count)</th>
             </tr>
@@ -90,7 +90,7 @@ export default App;
 // - search box
 
 // Output as a table
-// - repo name (id)
+// - repo name (name)
 // - author (owner > login)
 // - number of stars (stargazers_count)
 
@@ -118,3 +118,5 @@ export default App;
 
 // issue with trying to commit to github - terminal shows current branch is behind, git stash, git stash clear but still having issues
 //error: failed to push some refs to 'https://github.com/kat25688/tech_test'
+
+// improvements add results on load and only search when value added to search box
