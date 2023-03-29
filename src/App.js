@@ -101,7 +101,7 @@ export default App;
 // - Sets of 25
 // - next/previous (only show previous if valid)
 
-//=====tasks complete / issues =========
+//=====tasks complete / issues ========
 // created search box and button - STATIC doesn't search
 // created table in react - DONE
 
